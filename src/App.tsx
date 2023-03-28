@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import AppRouter from './router';
 
 const App = () => {
   return (
     <div>
-      <h1>HELLO WORLD</h1>
+      <AppRouter/>
     </div>
   );
 }
