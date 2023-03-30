@@ -36,24 +36,35 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/about"
+                  to="/read"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
                   onClick={closeMobileMenu}
                 >
-                  About
+                  Read
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/contact"
+                  to="/learn"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
                   onClick={closeMobileMenu}
                 >
-                  Contact
+                  Learn
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/watch"
+                  className={({ isActive }) =>
+                    "nav-links" + (isActive ? " activated" : "")
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  Watch
                 </NavLink>
               </li>
               <li className="nav-item">
