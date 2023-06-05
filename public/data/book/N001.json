@@ -1,0 +1,17 @@
+{
+  "coverImageURL": "/assets/nature/natureBooksContent-1/COVER.png",
+  "content": [
+    {
+        "imageURL": "lorem ipsum",
+        "description": "lorem ipsum"
+    }
+],
+  "name": "Mengapa Lebah Berdengung",
+  "id": "N001",
+  "category": "nature",
+  "description": "Mengapa lebah tidak bisa bekerja tanpa bunyi? Mereka berdengung dengan tujuan tertentu. Ayo belajar tentang bumble bee bersama buku ini.",
+  "author": "Nabanita Deshmukh",
+  "illustrator": "Zainab Tambawalla",
+  "publisher": "Pratham Books",
+  "license": "CC-BY-4.0"
+}

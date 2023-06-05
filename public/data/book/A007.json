@@ -1,0 +1,16 @@
+{
+    "coverImageURL": "/assets/booksContent-9/COVER.png",
+    "content": [
+        {
+            "imageURL": "lorem ipsum",
+            "description": "lorem ipsum"
+        }
+    ],
+    "name": "Petualangan Menakjubkan",
+    "id": "A001",
+    "category": "adventure",
+    "description": "Tito dan Rika memperebutkan ponsel ketika, dengan tidak sengaja menekan tombol, mereka memanggil UFO. Alien muncul di pintu dan meminta mereka untuk naik. Ditemani seekor anak anjing dan kunang-kunang, mereka melakukan petualangan besar di pesawat luar angkasa. Tapi keesokan paginya mereka bertanya-tanya… Apakah itu semua hanya mimpi?",
+    "author": "Kim Ann Arun",
+    "illustrator": "Seat Sopheap",
+    "publisher": "The Asia Foundation"
+}
