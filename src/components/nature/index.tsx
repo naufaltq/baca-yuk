@@ -6,9 +6,9 @@ import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { RootState } from "../../redux/store";
 import { setNatureBooksData } from "../../redux/slices/natureBooksSlice";
 import { fetcherBooksData } from "../../api-call/fetchJSONData";
+import { BooksComponentProps } from "../../types/types";
 
-const NatureBooksComponent = () => {
-    const natureBooks = ['/data/book/N001.json', '/data/book/N002.json', '/data/book/N003.json', '/data/book/N004.json', '/data/book/N005.json', '/data/book/N006.json']
+const NatureBooksComponent = ({booksList}: BooksComponentProps) => {
     const natureBooksData = useAppSelector((state: RootState) => state.natureBooks.value)
     const dispatch = useAppDispatch();
 
@@ -17,14 +17,14 @@ const NatureBooksComponent = () => {
     }, [])
 
     const setFunFactsDataToState = async () => {
-        Promise.all(fetcherBooksData(natureBooks)).then((item) => {
+        booksList !== undefined && Promise.all(fetcherBooksData(booksList)).then((item) => {
             dispatch(setNatureBooksData(item));
         })
     }
 
     return (
-        <Container maxW='6xl' centerContent>
-            <Link as={ReactRouterLink} to={`/read/nature`}><Heading>Alam</Heading></Link>
+        <Container maxW='6xl'>
+            <Heading mt={14}>Alam</Heading>
             <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing="6">
                 {natureBooksData !== undefined && natureBooksData.map((item) => {
                     return (
@@ -39,7 +39,6 @@ const NatureBooksComponent = () => {
                     )
                 })}
             </SimpleGrid>
-
         </Container>
 
     )
