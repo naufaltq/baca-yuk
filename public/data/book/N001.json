@@ -2,8 +2,52 @@
   "coverImageURL": "/assets/nature/natureBooksContent-1/COVER.png",
   "content": [
     {
-        "imageURL": "/assets/nature/natureBooksContent-1/Mengapa lebah berdengung 2.jpg",
+        "imageURL": "/assets/nature/natureBooksContent-1/Mengapa Lebah Berdengung 2.jpg",
         "description": "Bzzz... Hei, dengungan apa itu? Apakah itu kode yang digunakan lebah untuk memanggil teman-temannya? Atau nyanyian kegembiraan ketika mereka menemukan madu?"
+    },
+    {
+        "imageURL": "/assets/nature/natureBooksContent-1/Mengapa Lebah Berdengung 3.jpg",
+        "description": "Lorem Ipsum"
+    },
+    {
+        "imageURL": "/assets/nature/natureBooksContent-1/Mengapa Lebah Berdengung 4.jpg",
+        "description": "Lorem Ipsum"
+    },
+    {
+        "imageURL": "/assets/nature/natureBooksContent-1/Mengapa Lebah Berdengung 5.jpg",
+        "description": "Lorem Ipsum"
+    },
+    {
+        "imageURL": "/assets/nature/natureBooksContent-1/Mengapa Lebah Berdengung 6.jpg",
+        "description": "Lorem Ipsum"
+    },
+    {
+        "imageURL": "/assets/nature/natureBooksContent-1/Mengapa Lebah Berdengung 7.jpg",
+        "description": "Lorem Ipsum"
+    },
+    {
+        "imageURL": "/assets/nature/natureBooksContent-1/Mengapa Lebah Berdengung 8.jpg",
+        "description": "Lorem Ipsum"
+    },
+    {
+        "imageURL": "/assets/nature/natureBooksContent-1/Mengapa Lebah Berdengung 9.jpg",
+        "description": "Lorem Ipsum"
+    },
+    {
+        "imageURL": "/assets/nature/natureBooksContent-1/Mengapa Lebah Berdengung 10.jpg",
+        "description": "Lorem Ipsum"
+    },
+    {
+        "imageURL": "/assets/nature/natureBooksContent-1/Mengapa Lebah Berdengung 11.jpg",
+        "description": "Lorem Ipsum"
+    },
+    {
+        "imageURL": "/assets/nature/natureBooksContent-1/Mengapa Lebah Berdengung 12.jpg",
+        "description": "Lorem Ipsum"
+    },
+    {
+        "imageURL": "/assets/nature/natureBooksContent-1/Mengapa Lebah Berdengung 13.jpg",
+        "description": "Lorem Ipsum"
     }
 ],
   "name": "Mengapa Lebah Berdengung",

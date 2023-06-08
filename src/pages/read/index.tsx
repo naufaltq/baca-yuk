@@ -5,10 +5,10 @@ import AdventureBooksComponent from '../../components/adventure'
 import { Link as ReactRouterLink } from 'react-router-dom';
 
 const Read = () => {
-    const natureBooks = ['/data/book/N001.json', '/data/book/N002.json', '/data/book/N003.json', '/data/book/N004.json', '/data/book/N005.json', 'data/book/N006.json'];
-    const natureBooksWithSlice = natureBooks.slice(0, 3);
     const adventureBooks = ['/data/book/A001.json', '/data/book/A002.json', '/data/book/A003.json', '/data/book/A004.json', '/data/book/A005.json', '/data/book/A006.json', '/data/book/A007.json'];
     const adventureBooksWithSlice = adventureBooks.slice(0, 3);
+    const natureBooks = ['/data/book/N001.json', '/data/book/N002.json', '/data/book/N003.json', '/data/book/N004.json', '/data/book/N005.json', 'data/book/N006.json'];
+    const natureBooksWithSlice = natureBooks.slice(0, 3);
 
     return (
         <>
@@ -32,7 +32,6 @@ const Read = () => {
                         size='lg'
                         w='180px'
                         variant='outline'
-
                         _hover={{
                             bg: 'blue.500',
                         }}
