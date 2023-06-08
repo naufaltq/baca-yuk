@@ -2,8 +2,8 @@
   "coverImageURL": "/assets/nature/natureBooksContent-1/COVER.png",
   "content": [
     {
-        "imageURL": "lorem ipsum",
-        "description": "lorem ipsum"
+        "imageURL": "/assets/nature/natureBooksContent-1/Mengapa lebah berdengung 2.jpg",
+        "description": "Bzzz... Hei, dengungan apa itu? Apakah itu kode yang digunakan lebah untuk memanggil teman-temannya? Atau nyanyian kegembiraan ketika mereka menemukan madu?"
     }
 ],
   "name": "Mengapa Lebah Berdengung",
