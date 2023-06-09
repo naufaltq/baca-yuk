@@ -17,7 +17,6 @@ export type BreadcrumbProps = {
     currentPage: string;
 }
 
-
 export interface BooksComponentProps {
     booksList: string[]
 }

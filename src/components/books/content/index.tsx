@@ -1,8 +1,7 @@
-import { Button, Container, Center, Image, Box, IconButton, useBreakpointValue, Text, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Stack } from '@chakra-ui/react';
+import {Center, Image, Box, IconButton, useBreakpointValue, Text, Stack } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Slider from 'react-slick'
-// Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 import axios from 'axios';
 import { BooksDataProps } from '../../../types/types';
@@ -50,7 +49,7 @@ const BookContent = () => {
     // These are the breakpoints which changes the position of the
     // buttons as the screen size changes
     const top = useBreakpointValue({ base: '90%', sm: '300px', md: '300px' });
-    const side = useBreakpointValue({ base: '10%', sm: '10px', md: '10px' });
+    const side = useBreakpointValue({ base: '100%', sm: '10px', md: '10px' });
 
     return (
         <>
@@ -63,7 +62,7 @@ const BookContent = () => {
                         currentPage={contentData.name} />}
             </Center>
             <Center mt={8}>
-                <Stack direction='column' >
+                <Stack direction='column'>
                     <Center >
                         <Text fontSize='3xl' as='h2' mb={5}>{contentData?.name}</Text>
                     </Center>

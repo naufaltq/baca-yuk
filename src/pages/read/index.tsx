@@ -65,7 +65,6 @@ const Read = () => {
                 </Link>
             </Center>
         </>
-
     )
 }
 

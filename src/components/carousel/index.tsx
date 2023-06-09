@@ -12,7 +12,6 @@ import {
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
-import Btn from "./button";
 
 
 const settings = {
