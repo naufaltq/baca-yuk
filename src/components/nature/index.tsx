@@ -24,7 +24,7 @@ const NatureBooksComponent = ({booksList}: BooksComponentProps) => {
 
     return (
         <Container maxW='6xl'>
-            <Heading mt={14}>Alam</Heading>
+            <Heading mt={10}>Alam</Heading>
             <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing="6">
                 {natureBooksData !== undefined && natureBooksData.map((item) => {
                     return (
@@ -33,6 +33,7 @@ const NatureBooksComponent = ({booksList}: BooksComponentProps) => {
                             content={item.content}
                             name={item.name}
                             id={item.id}
+                            key={item.id}
                             category={item.category}
                             description={item.description}
                             author={item.author} />

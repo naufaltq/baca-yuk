@@ -3,7 +3,7 @@ import { BreadcrumbForNaturePage } from "../../../components/breadcrumb";
 import NatureBooksComponent from "../../../components/nature";
 
 const Nature = () => {
-    const natureBooksJSONData = ['/data/book/N001.json', '/data/book/N002.json', '/data/book/N003.json', '/data/book/N004.json', '/data/book/N005.json', 'data/book/N006.json'];
+    const natureBooksJSONData = ['/data/book/N001.json', '/data/book/N002.json', '/data/book/N003.json'];
     return (
         <Container maxW='6xl' mb={10}>
             <Center>
