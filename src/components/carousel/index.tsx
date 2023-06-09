@@ -7,6 +7,7 @@ import {
   Heading,
   Text,
   Container,
+  Button,
 } from '@chakra-ui/react';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 import Slider from 'react-slick';
@@ -37,7 +38,7 @@ const Carousel = () => {
     {
       title: 'Ikan Tipis',
       text:
-        "Ikan tipis lalu dijemur. “Kapan ikan tipis ini kering, Tante?” tanya Yamad. Tante Nuy tertawa, “Kamu sudah tidak sabar, ya?”",
+        "Ikan tipis lalu dijemur. “Kapan ikan tipis ini kering, Tante?” tanya Yamad. Tante Nuy tertawa, “Kamu sudah tidak sabar, ya?” Yamad tidak sabar menunggku ikannya kering, Yamad ingin segera memasak ikannya",
       image:
         'images/ikan-tipis.jpg',
     },
@@ -123,9 +124,26 @@ const Carousel = () => {
                 <Text fontSize={{ base: 'md', lg: 'lg' }} color="Ivory">
                   {card.text}
                 </Text>
-                <Link to="/read">
-                    <Btn />
-                </Link>
+                <div>
+                  <Link to="/read">
+                      <Button 
+                          flex={1}
+                          fontSize={'md'}
+                          rounded={'xl'}
+                          bg={'#009900'}
+                          color={'white'}
+                          size='lg'
+                          w='180px'
+                          _hover={{
+                              bg: 'green',
+                          }}
+                          _focus={{
+                              bg: '#1f8915',
+                          }}>
+                          Baca
+                      </Button>
+                  </Link>
+                </div>
               </Stack>
             </Container>
           </Box>

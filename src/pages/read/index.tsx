@@ -33,10 +33,10 @@ const Read = () => {
                         w='180px'
                         variant='outline'
                         _hover={{
-                            bg: 'blue.500',
+                            bg: '#009900',
                         }}
                         _focus={{
-                            bg: 'blue.500',
+                            bg: '#1f8915',
                         }}>
                         Lihat Semua
                     </Button>
@@ -55,10 +55,10 @@ const Read = () => {
                         size='lg'
                         w='180px'
                         _hover={{
-                            bg: 'blue.500',
+                            bg: '#1f8915',
                         }}
                         _focus={{
-                            bg: 'blue.500',
+                            bg: '#1f8915',
                         }}>
                         Lihat semua
                     </Button>

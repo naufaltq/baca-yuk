@@ -53,18 +53,18 @@ const Books = ({ coverImageURL, name, id, category, description, author }: Books
                                         flex={1}
                                         fontSize={'sm'}
                                         rounded={'full'}
-                                        bg={'blue.400'}
-                                        color={'white'}
+                                        bg={'#009900'}
+                                        color={'#fff'}
                                         size='lg'
                                         w='300px'
                                         boxShadow={
-                                            '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
+                                            '0 12px 24px rgba(31,137,21,.24),0 2px 6px rgba(31,137,21,.16),0 0 1px rgba(0,0,0,.08)!important;'
                                         }
                                         _hover={{
-                                            bg: 'blue.500',
+                                            bg: 'green',
                                         }}
                                         _focus={{
-                                            bg: 'blue.500',
+                                            bg: 'green',
                                         }}>
                                         Baca
                                     </Button>
