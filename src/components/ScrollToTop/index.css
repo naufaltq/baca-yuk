@@ -1,0 +1,15 @@
+.btn-up{
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+    font-size: 40px;
+    color: #009900;
+}
+
+@media screen and (max-width: 960px){
+    .btn-up{
+        position: fixed;
+        bottom: 155px;
+        right: 20px;
+    }
+}

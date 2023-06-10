@@ -9,6 +9,8 @@ import Adventure from "../pages/read/adventure";
 import Nature from "../pages/read/nature";
 import BookContent from "../components/books/content";
 import NotFound404 from "../pages/404";
+import Footer from "../components/footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 const AppRouter = () => {
     return (
@@ -36,6 +38,8 @@ const AppRouter = () => {
                     <Route path="*" element={<NotFound404/>}></Route>
                 </Route>
             </Routes>
+            <ScrollToTop/>
+            <Footer/>
         </Router>
     )
 }
