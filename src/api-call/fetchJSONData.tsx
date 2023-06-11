@@ -11,3 +11,11 @@ const fetchBooksData = async (pathURL: string): Promise<BooksDataProps> => {
 }
 
 export const fetcherBooksData = (booksData: string[]) => booksData.map(book => fetchBooksData(book));
+
+export const fetchBookContentFromID = async (bookID: string | undefined) : Promise<BooksDataProps> => { //will run this if there is no data in redux state
+    const data: any =
+        await axios
+            .get(`/data/book/${bookID}.json`)
+            .catch(err => console.log(err));
+    return data.data;
+} 

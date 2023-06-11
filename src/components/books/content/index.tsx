@@ -1,13 +1,13 @@
-import {Center, Image, Box, IconButton, useBreakpointValue, Text, Stack } from '@chakra-ui/react';
+import {Center, Image, Box, IconButton, useBreakpointValue, Text, Stack ,Container } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Slider from 'react-slick'
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
-import axios from 'axios';
 import { BooksDataProps } from '../../../types/types';
 import { BreadcrumbForAdventureBookContent, BreadcrumbForNatureBookContent } from '../../breadcrumb';
 import { useAppSelector } from '../../../redux/hooks';
 import { RootState } from '../../../redux/store';
+import { fetchBookContentFromID } from '../../../api-call/fetchJSONData';
 
 
 const BookContent = () => {
@@ -25,26 +25,31 @@ const BookContent = () => {
     const params = useParams();
     const bookID = params?.id;
     const [contentData, setContentData] = useState<BooksDataProps>();
-    const natureBooksData = useAppSelector((state: RootState) => state.natureBooks.value);
     const adventureBooksData = useAppSelector((state: RootState) => state.adventureBooks.value);
+    const natureBooksData = useAppSelector((state: RootState) => state.natureBooks.value);
+    const adventureBooksDataID = useAppSelector((state: RootState) => state.adventureBooks.jsonData.id);
+    const natureBooksDataID = useAppSelector((state: RootState) => state.natureBooks.jsonData.id);
+    const mergedID = natureBooksDataID.concat(adventureBooksDataID);
     const mergedData = natureBooksData.concat(adventureBooksData);
 
     useEffect(() => {
-        getBookContentFromID();
-    }, [])
-
-    const fetchBookContentFromID = async (): Promise<BooksDataProps> => { //will run this if there is no data in redux state
-        const data: any =
-            await axios
-                .get(`/data/book/${bookID}.json`)
-                .catch(err => console.log(err));
-        return data.data;
-    }
-
-    const getBookContentFromID = () => {
-        const filteredContentData = mergedData.filter(content => content.id === bookID);
-        filteredContentData !== undefined ? setContentData(filteredContentData[0]) : fetchBookContentFromID().then(res => setContentData(res));
-    }
+        const getBookContentFromID = () => {
+            const filteredContentData = mergedData.filter(content => content.id === bookID);
+            if (filteredContentData.length !== 0) {
+                setContentData(filteredContentData[0]);
+            } else {
+                if (mergedID.includes(bookID!)) {
+                    fetchBookContentFromID(bookID).then(res => setContentData(res));
+                } else {
+                    return (
+                        <Center mt={24}><Text size='xl'>Konten Tidak Ditemukan</Text></Center>
+                    );
+                }
+            }
+        }
+        mergedData !== undefined && getBookContentFromID();
+        // eslint-disable-next-line 
+    }, [bookID])
 
     // These are the breakpoints which changes the position of the
     // buttons as the screen size changes
@@ -52,7 +57,7 @@ const BookContent = () => {
     const side = useBreakpointValue({ base: '100%', sm: '10px', md: '10px' });
 
     return (
-        <>
+        <Container minH='90vh' maxW='100vh' mb={10}>
             <Center>
                 {contentData !== undefined && contentData.category === 'adventure' &&
                     <BreadcrumbForAdventureBookContent
@@ -121,12 +126,11 @@ const BookContent = () => {
                                     </Stack>
                                 </>
                             ))}
-
                         </Slider>
                     </Box>
                 </Stack>
             </Center>
-        </>
+        </Container>
     );
 
 }

@@ -7,7 +7,7 @@ import { RootState } from "../../../redux/store";
 const Nature = () => {
     const natureBooksJSONData = useAppSelector((state : RootState) => state.natureBooks.jsonData.json);
     return (
-        <Container maxW='6xl' mb={10}>
+        <Container minH='90vh' maxW='6xl' mb={10}>
             <Center>
                 <BreadcrumbForNaturePage currentPage={'Alam'} />
             </Center>
