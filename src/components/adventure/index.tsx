@@ -24,7 +24,7 @@ const AdventureBooksComponent = ({booksList}: BooksComponentProps) => {
     return (
         <Container maxW='6xl'>
             <Heading mt={10}>Petualangan</Heading>
-            <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing="1">
+            <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing="6">
                 {adventureBookData !== undefined && adventureBookData.map((item) =>
                     <Books
                         coverImageURL={item.coverImageURL}

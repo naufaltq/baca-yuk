@@ -20,3 +20,11 @@ export type BreadcrumbProps = {
 export interface BooksComponentProps {
     booksList: string[]
 }
+
+export interface BookContainerProps{
+    content: {
+        imageURL: string,
+        description: string
+    }[],
+    title: string
+}

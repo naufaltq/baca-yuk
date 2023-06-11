@@ -28,7 +28,7 @@ const Books = ({ coverImageURL, name, id, category, description, author }: Books
                         alt={`Picture of ${name}`}
                         rounded="lg"
                         maxH='150px'
-                        mt={3}
+                        mt={4}
                     />
                 </Center>
                 <Box p="6">
@@ -55,7 +55,7 @@ const Books = ({ coverImageURL, name, id, category, description, author }: Books
                                         bg={'#009900'}
                                         color={'#fff'}
                                         size='lg'
-                                        w='300px'
+                                        w='80%'
                                         boxShadow={
                                             '0 12px 24px rgba(31,137,21,.24),0 2px 6px rgba(31,137,21,.16),0 0 1px rgba(0,0,0,.08)!important;'
                                         }
