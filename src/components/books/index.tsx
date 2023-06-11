@@ -13,8 +13,7 @@ import { Link as ReactRouterLink } from 'react-router-dom'
 import { BooksDataProps } from '../../types/types';
 
 const Books = ({ coverImageURL, name, id, category, description, author }: BooksDataProps) => {
-    const categoryWithSlug = category?.replaceAll(" ", "-")
-    const linkToContent = `/read/${categoryWithSlug}/${id}`
+    const linkToContent = `/read/${id}`
     return (
         <Flex p={2} maxW="6xl" alignItems="center" justifyContent="center" mt={8}>
             <Box

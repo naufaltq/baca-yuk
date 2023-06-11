@@ -21,27 +21,24 @@ const AppRouter = () => {
                     <Route index element={<Home />} />
                     <Route path="read">
                         <Route index element={<Read />} />
-                        <Route path="adventure">
-                            <Route index element={<Adventure />} />
-                            <Route path=":id" element={<BookContent />} />
-                        </Route>
-                        <Route path="nature">
-                            <Route index element={<Nature />} />
-                            <Route path=":id" element={<BookContent />} />
-                        </Route>
+                        <Route path="adventure" element={<Adventure />} />
+                        <Route path="nature" element={<Nature />} />
+                        <Route path=":id" element={<BookContent />} />
                     </Route>
                     <Route path="learn">
                         <Route index element={<Learn />} />
                     </Route>
-                    <Route path="watch" element={<Watch />} />
+                    <Route path="watch">
+                        <Route index element={<Watch />} />
+                    </Route>
                     <Route path="quiz" element={<Quiz />} />
                     <Route path="*" element={<NotFound404/>}></Route>
                 </Route>
             </Routes>
             <ScrollToTop/>
-            <Footer/>
+            <Footer />
         </Router>
-    )
-}
+    );
+};
 
 export default AppRouter;
