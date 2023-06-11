@@ -4,7 +4,6 @@ import {
     Image,
     Button,
     Center,
-    Link,
     Heading,
     Text
 } from '@chakra-ui/react';
@@ -45,8 +44,9 @@ const Books = ({ coverImageURL, name, id, category, description, author }: Books
                                 <Text fontSize='xs' mt={2} noOfLines={[1, 2]}>{description}</Text>
                             </Box>
                             <Center>
-                                <Link as={ReactRouterLink} to={linkToContent}>
                                     <Button
+                                        as={ReactRouterLink} 
+                                        to={linkToContent}
                                         mt={6}
                                         mb={4}
                                         flex={1}
@@ -67,7 +67,6 @@ const Books = ({ coverImageURL, name, id, category, description, author }: Books
                                         }}>
                                         Baca
                                     </Button>
-                                </Link>
                             </Center>
                         </Flex>
                     </Center>

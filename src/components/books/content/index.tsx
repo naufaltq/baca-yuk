@@ -68,7 +68,7 @@ const BookContent = () => {
             </Center>
             <Center mt={8}>
                 <Stack direction='column'>
-                    <Flex flexDirection='column'  mb={6}>
+                    <Flex flexDirection='column' mb={6}>
                         <Center>
                             <Heading fontSize='3xl' as='h2' mb={2}>{contentData?.name}</Heading>
                         </Center>
