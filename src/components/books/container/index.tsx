@@ -11,7 +11,7 @@ const BookContainer = ({content, title}: BookContainerProps) => {
                 <Image src={content[currentPage].imageURL} rounded='xl' w={['100%', '50%']} h={['100%', '100%']} alt={title + '' + currentPage.toString()}></Image>
             </Center>
             <Center>
-                <Text w='100%' mt={6}>{content[currentPage].description}</Text>
+                <Text w='2xl' mt={6} lineHeight={2}>{content[currentPage].description}</Text>
             </Center>
             <Center mt={6}>
                 {currentPage > 0 && <IconButton onClick={() => setCurrentPage(prevPage => prevPage - 1)} aria-label='Previous page' icon={<FaAngleLeft />} rounded='full' />}
