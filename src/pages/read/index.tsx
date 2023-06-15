@@ -8,13 +8,13 @@ import { RootState } from '../../redux/store';
 
 const Read = () => {
     const adventureBooks = useAppSelector((state : RootState) => state.adventureBooks.jsonData.json);
-    const adventureBooksWithSlice = adventureBooks.slice(0, 3);
+    const adventureBooksWithSlice = adventureBooks.slice(0, 4);
     const natureBooks = useAppSelector((state : RootState) => state.natureBooks.jsonData.json);
-    const natureBooksWithSlice = natureBooks.slice(0, 3);
+    const natureBooksWithSlice = natureBooks.slice(0, 4);
 
     return (
         <>
-            <Center>
+            <Center mt={-10}>
                 <BreadcrumbForReadPage currentPage={'Read'} />
             </Center>
             <Center>
@@ -25,8 +25,8 @@ const Read = () => {
                 <Button
                     as={ReactRouterLink}
                     to='adventure' 
-                    mt={6}
-                    mb={8}
+                    mt={10}
+                    mb={5}
                     flex={1}
                     fontSize={'sm'}
                     rounded={'xl'}
@@ -49,7 +49,7 @@ const Read = () => {
                 <Button
                     as={ReactRouterLink} 
                     to='nature' 
-                    mt={6}
+                    mt={10}
                     mb={4}
                     flex={1}
                     fontSize={'sm'}

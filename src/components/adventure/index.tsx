@@ -12,19 +12,20 @@ const AdventureBooksComponent = ({booksList}: BooksComponentProps) => {
     const dispatch = useAppDispatch();
 
     useEffect(() => {
+        const setAdventureBooksDataToState = async () => {
+            booksList!== undefined && Promise.all(fetcherBooksData(booksList)).then((item) => {
+                dispatch(setAdventureBooksData(item));
+            })
+        }
+        
         adventureBookData !== undefined && setAdventureBooksDataToState();
     }, [])
 
-    const setAdventureBooksDataToState = async () => {
-        booksList!== undefined && Promise.all(fetcherBooksData(booksList)).then((item) => {
-            dispatch(setAdventureBooksData(item));
-        })
-    }
 
     return (
-        <Container maxW='6xl'>
-            <Heading mt={10}>Petualangan</Heading>
-            <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing="6">
+        <Container maxW='7xl' mr='100px'>
+            <Heading mt={10} ml='1'>Petualangan</Heading>
+            <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing="4">
                 {adventureBookData !== undefined && adventureBookData.map((item) =>
                     <Books
                         coverImageURL={item.coverImageURL}

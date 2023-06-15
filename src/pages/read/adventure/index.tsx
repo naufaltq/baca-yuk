@@ -7,8 +7,8 @@ import { RootState } from "../../../redux/store";
 const Adventure = () => {
     const adventureBooksJSONData = useAppSelector((state : RootState) => state.adventureBooks.jsonData.json)
     return (
-        <Container minH='90vh' maxW='6xl' mb={10}>
-            <Center>
+        <Container minH='90vh' maxW='7xl' mb={10} mr='113px' p={3}>
+            <Center mt={-10}>
                 <BreadcrumbForAdventurePage currentPage={'Petualangan'} />
             </Center>
             <AdventureBooksComponent booksList={adventureBooksJSONData} />

@@ -14,12 +14,13 @@ import { BooksDataProps } from '../../types/types';
 const Books = ({ coverImageURL, name, id, category, description, author }: BooksDataProps) => {
     const linkToContent = `/read/${id}`
     return (
-        <Flex p={2} maxW="6xl" alignItems="center" justifyContent="center" mt={8}>
+        <Flex maxW="6xl" alignItems="center" justifyContent="center" mt={8}>
             <Box
                 maxW="2xl"
                 maxH="6xl"
                 borderWidth="1px"
                 rounded="lg"
+                p={3}
                 shadow="lg"
                 position="relative">
                 <Center>
@@ -27,13 +28,12 @@ const Books = ({ coverImageURL, name, id, category, description, author }: Books
                         src={coverImageURL}
                         alt={`Picture of ${name}`}
                         rounded="lg"
-                        maxH='150px'
-                        mt={4}
+                        maxH='165px'
                     />
                 </Center>
-                <Box p="6">
+                <Box p="2" mt='2'>
                     <Center w='full'>
-                        <Flex mt="1" justifyContent="space-between" flexDirection="column" alignContent="center">
+                        <Flex mt="15px" justifyContent="space-between" flexDirection="column" alignContent="center">
                             <Box
                                 fontSize="xl"
                                 fontWeight="semibold"
