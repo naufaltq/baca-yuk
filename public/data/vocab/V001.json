@@ -1,0 +1,30 @@
+{
+    "coverImageURL": "/assets/vocabs/vocabsContent-1/AnimalCover.png",
+    "content": [
+        {
+            "imageURL": "/assets/vocabs/vocabsContent-1/AN.png",
+            "description": "Pinguin"
+        },
+        {
+            "imageURL": "/assets/vocabs/vocabsContent-1/AN1.png",
+            "description": "Bebek"
+        },
+        {
+            "imageURL": "/assets/vocabs/vocabsContent-1/AN2.png",
+            "description": "Kepiting"
+        },
+        {
+            "imageURL": "/assets/vocabs/vocabsContent-1/AN3.png",
+            "description": "Bintang Laut"
+        },
+        {
+            "imageURL": "/assets/vocabs/vocabsContent-1/AN4.png",
+            "description": "Tupai"
+        }
+    ],
+    "name": "Hewan",
+    "id": "V001",
+    "category": "vocabs",
+    "description": "Nama nama hewan dalam bahasa Inggris",
+    "author": "Pratiwi Sibarani"
+}

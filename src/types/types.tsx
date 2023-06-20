@@ -28,3 +28,12 @@ export interface BookContainerProps{
     }[],
     title: string
 }
+
+export interface VocabsDataProps  {
+    coverImageURL: string,
+    content: content[],
+    name: string,
+    id: string,
+    category: string,
+    description: string,
+}
