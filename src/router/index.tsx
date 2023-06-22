@@ -17,6 +17,7 @@ import ScrollToTop from "../components/ScrollToTop";
 // import ProtectedRoutes from "../components/protectedRoutes";
 import Vocab from "../components/vocab";
 import VocabContent from "../components/vocabItems/content";
+import EmbedYoutubeVideoContent from "../components/watch/embedYTVideo/content";
 
 const AppRouter = () => {
     return (
@@ -38,6 +39,10 @@ const AppRouter = () => {
                             <Route index element={<Vocab />} />
                             <Route path=":id" element={<VocabContent />} />
                         </Route>
+                    </Route>
+                    <Route path="watch">
+                        <Route index element={<Watch />} />
+                        <Route path=":id" element={<EmbedYoutubeVideoContent />} />
                     </Route>
                     {/* <Route path="mybook">
                         <Route index element={<MyBooks/>}/>

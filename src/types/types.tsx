@@ -37,3 +37,16 @@ export interface VocabsDataProps  {
     category: string,
     description: string,
 }
+
+export interface VideoDataProps { 
+    coverImageURL: string,
+    embedVideoURL: string,
+    name: string,
+    id: string,
+    description: string,
+    author: string
+}
+
+export interface WatchComponentProps {
+    videosJSONData: string[]
+}

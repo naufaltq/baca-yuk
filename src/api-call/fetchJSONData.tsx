@@ -1,4 +1,4 @@
-import { BooksDataProps } from "../types/types";
+import { BooksDataProps, VideoDataProps } from "../types/types";
 import axios from "axios";
 
 
@@ -19,3 +19,21 @@ export const fetchBookContentFromID = async (bookID: string | undefined) : Promi
             .catch(err => console.log(err));
     return data.data;
 } 
+
+const fetchVideosData = async (pathURL: string): Promise<VideoDataProps> => {
+    const data: any =
+        await axios
+            .get(pathURL)
+            .catch(err => console.log(err));
+    return data.data
+}
+
+export const fetcherVideosData = (videosData: string[]) => videosData.map(video => fetchVideosData(video));
+
+export const fetchVideoContentFromID = async (videoID: string | undefined): Promise<VideoDataProps> => { //will run this if there is no data in redux state
+    const data: any =
+        await axios
+            .get(`/data/video/${videoID}.json`)
+            .catch(err => console.log(err));
+    return data.data;
+}

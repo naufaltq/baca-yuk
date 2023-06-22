@@ -117,3 +117,32 @@ export const BreadcrumbForVocabContent = ({ currentPage }: BreadcrumbProps) => {
         </Breadcrumb>
     )
 }
+
+export const BreadcrumbForWatchContent = ({ currentPage }: BreadcrumbProps) => {
+    return (
+        <Breadcrumb mt={24} separator={<ChevronRightIcon color='gray.500' />}>
+            <BreadcrumbItem>
+                <BreadcrumbLink as={ReactRouterLink} to='/'>Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem>
+                <BreadcrumbLink as={ReactRouterLink} to='/watch'>Watch</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem isCurrentPage>
+                <BreadcrumbLink>{currentPage}</BreadcrumbLink>
+            </BreadcrumbItem>
+        </Breadcrumb>
+    )
+}
+
+export const BreadcrumbForWatchPage = ({ currentPage }: BreadcrumbProps) => {
+    return (
+        <Breadcrumb mt={24} separator={<ChevronRightIcon color='gray.500' />}>
+            <BreadcrumbItem>
+                <BreadcrumbLink as={ReactRouterLink} to='/'>Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem isCurrentPage>
+                <BreadcrumbLink>{currentPage}</BreadcrumbLink>
+            </BreadcrumbItem>
+        </Breadcrumb>
+    )
+}
