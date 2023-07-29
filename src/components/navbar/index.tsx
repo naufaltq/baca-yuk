@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes} from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { NavLink } from "react-router-dom";
 
@@ -76,17 +76,6 @@ function Navbar() {
                   onClick={closeMobileMenu}
                 >
                   Quiz
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/games"
-                  className={({ isActive }) =>
-                    "nav-links" + (isActive ? " activated" : "")
-                  }
-                  onClick={closeMobileMenu}
-                >
-                  Games
                 </NavLink>
               </li>
             </ul>

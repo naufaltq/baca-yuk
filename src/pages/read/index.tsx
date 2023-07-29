@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Center, Button, Heading } from '@chakra-ui/react';
 import { BreadcrumbForReadPage } from '../../components/breadcrumb';
 import NatureBooksComponent from '../../components/nature';
@@ -5,12 +6,18 @@ import AdventureBooksComponent from '../../components/adventure'
 import { Link as ReactRouterLink } from 'react-router-dom';
 import { useAppSelector } from '../../redux/hooks';
 import { RootState } from '../../redux/store';
+import useFetchFirebase from '../../redux/slices/fetchFirebase';
 
 const Read = () => {
+    const {data, loading} = useFetchFirebase("books");
     const adventureBooks = useAppSelector((state : RootState) => state.adventureBooks.jsonData.json);
-    const adventureBooksWithSlice = adventureBooks.slice(0, 4);
     const natureBooks = useAppSelector((state : RootState) => state.natureBooks.jsonData.json);
     const natureBooksWithSlice = natureBooks.slice(0, 4);
+
+    useEffect(() => {
+        document.title = 'Read - Baca Yuk'
+        // eslint-disable-next-line 
+    }, [])
 
     return (
         <>
@@ -20,7 +27,7 @@ const Read = () => {
             <Center>
                 <Heading size='2xl' as='h1' mt={4} mb={8}>Semua Kategori</Heading>
             </Center>
-            <AdventureBooksComponent booksList={adventureBooksWithSlice} />
+            <AdventureBooksComponent firstSlice={0} lastSlice={4}/>
             <Center>
                 <Button
                     as={ReactRouterLink}
@@ -44,7 +51,7 @@ const Read = () => {
                     Lihat Semua
                 </Button>
             </Center>
-            <NatureBooksComponent booksList= {natureBooksWithSlice} />
+            <NatureBooksComponent firstSlice={8} lastSlice={12}/>
             <Center mb={10}>
                 <Button
                     as={ReactRouterLink} 

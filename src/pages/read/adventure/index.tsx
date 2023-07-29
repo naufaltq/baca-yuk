@@ -1,18 +1,21 @@
+import { useEffect } from "react";
 import { Container, Center } from "@chakra-ui/react";
 import AdventureBooksComponent from "../../../components/adventure";
 import { BreadcrumbForAdventurePage } from "../../../components/breadcrumb";
-import { useAppSelector } from "../../../redux/hooks";
-import { RootState } from "../../../redux/store";
 
 const Adventure = () => {
-    const adventureBooksJSONData = useAppSelector((state : RootState) => state.adventureBooks.jsonData.json)
+    useEffect(() => {
+        document.title = 'Read Petualangan - Baca Yuk'
+        // eslint-disable-next-line 
+    }, [])
+
     return (
-        <Container minH='90vh' maxW='7xl' mb={10} mr='113px' p={3}>
+        <div>
             <Center mt={-10}>
                 <BreadcrumbForAdventurePage currentPage={'Petualangan'} />
             </Center>
-            <AdventureBooksComponent booksList={adventureBooksJSONData} />
-        </Container>
+            <AdventureBooksComponent firstSlice={0} lastSlice={8}/>
+        </div>
     )
 }
 

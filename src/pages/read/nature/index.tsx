@@ -1,18 +1,22 @@
+import { useEffect } from "react";
 import { Container, Center } from "@chakra-ui/react";
 import { BreadcrumbForNaturePage } from "../../../components/breadcrumb";
 import NatureBooksComponent from "../../../components/nature";
-import { useAppSelector } from "../../../redux/hooks";
-import { RootState } from "../../../redux/store";
 
 const Nature = () => {
-    const natureBooksJSONData = useAppSelector((state : RootState) => state.natureBooks.jsonData.json);
+
+    useEffect(() => {
+        document.title = 'Read Alam - Baca Yuk'
+        // eslint-disable-next-line 
+    }, [])
+
     return (
-        <Container minH='90vh' maxW='7xl' mb={10} mr='113px' p={3}>
+        <div>
             <Center mt={-10}>
                 <BreadcrumbForNaturePage currentPage={'Alam'} />
             </Center>
-            <NatureBooksComponent booksList={natureBooksJSONData} />
-        </Container>
+            <NatureBooksComponent firstSlice={8} lastSlice={17}/>
+        </div>
     )
 }
 

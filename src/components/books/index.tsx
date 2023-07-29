@@ -9,9 +9,8 @@ import {
 } from '@chakra-ui/react';
 import { Link as ReactRouterLink } from 'react-router-dom'
 
-import { BooksDataProps } from '../../types/types';
-
-const Books = ({ coverImageURL, name, id, category, description, author }: BooksDataProps) => {
+const Books = ({ coverImageURL, name, id, category, description, author }: any) => {
+    
     const linkToContent = `/read/${id}`
     return (
         <Flex maxW="6xl" alignItems="center" justifyContent="center" mt={8}>
@@ -28,10 +27,11 @@ const Books = ({ coverImageURL, name, id, category, description, author }: Books
                         src={coverImageURL}
                         alt={`Picture of ${name}`}
                         rounded="lg"
-                        maxH='165px'
+                        // maxH='200px'
+                        maxW="250px"
                     />
                 </Center>
-                <Box p="2" mt='2'>
+                <Box p={1} mt='2'>
                     <Center w='full'>
                         <Flex mt="15px" justifyContent="space-between" flexDirection="column" alignContent="center">
                             <Box
@@ -45,7 +45,7 @@ const Books = ({ coverImageURL, name, id, category, description, author }: Books
                             </Box>
                             <Center>
                                     <Button
-                                        as={ReactRouterLink} 
+                                        as={ReactRouterLink}
                                         to={linkToContent}
                                         mt={6}
                                         mb={4}

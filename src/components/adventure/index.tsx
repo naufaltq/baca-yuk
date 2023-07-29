@@ -1,32 +1,16 @@
-import { Container, SimpleGrid, Heading} from "@chakra-ui/react";
+import {SimpleGrid, Heading} from "@chakra-ui/react";
 import Books from '../books';
-import { useEffect,  } from "react";
-import { fetcherBooksData } from "../../api-call/fetchJSONData";
-import { BooksComponentProps } from "../../types/types";
-import { setAdventureBooksData } from "../../redux/slices/adventureBooksSlice";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { RootState } from "../../redux/store";
+import useFetchFirebase from "../../redux/slices/fetchFirebase";
 
-const AdventureBooksComponent = ({booksList}: BooksComponentProps) => {
-    const adventureBookData = useAppSelector((state: RootState) => state.adventureBooks.value);
-    const dispatch = useAppDispatch();
-
-    useEffect(() => {
-        const setAdventureBooksDataToState = async () => {
-            booksList!== undefined && Promise.all(fetcherBooksData(booksList)).then((item) => {
-                dispatch(setAdventureBooksData(item));
-            })
-        }
-        
-        adventureBookData !== undefined && setAdventureBooksDataToState();
-    }, [])
-
+const AdventureBooksComponent = ({ firstSlice, lastSlice }: { firstSlice: number; lastSlice: number }) => {
+    const {data} = useFetchFirebase("books");
+    const dataSlice = data.slice(firstSlice, lastSlice);
 
     return (
-        <Container maxW='7xl' mr='100px'>
-            <Heading mt={10} ml='1'>Petualangan</Heading>
+        <div className="container">
+            <Heading mt={10}>Petualangan</Heading>
             <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing="4">
-                {adventureBookData !== undefined && adventureBookData.map((item) =>
+                {dataSlice !== undefined && dataSlice.map((item) =>
                     <Books
                         coverImageURL={item.coverImageURL}
                         name={item.name}
@@ -39,7 +23,7 @@ const AdventureBooksComponent = ({booksList}: BooksComponentProps) => {
                     />
                 )}
             </SimpleGrid>
-        </Container>
+        </div>
     )
 }
 
