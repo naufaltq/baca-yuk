@@ -1,4 +1,3 @@
-import React from "react";
 import "./style.css";
 function HeroSection({ lightBg, topLine, lightText, lightTextDesc, headline, description, img, alt, imgStart }) {
   return (

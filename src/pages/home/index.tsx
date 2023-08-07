@@ -11,7 +11,7 @@ const Home = () => {
       <HeroSection {...homeObjThree}/>
       <HeroSection {...homeObjFour}/>
       <HeroSection {...homeObjFive}/>
-    </div>
+    </div> 
   )
 }
 

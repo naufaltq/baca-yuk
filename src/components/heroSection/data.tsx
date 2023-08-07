@@ -57,5 +57,5 @@ export const homeObjOne = {
     imgStart: "",
     img: "images/kuis.png",
     alt: "quiz",
-  };
+  }; 
   
