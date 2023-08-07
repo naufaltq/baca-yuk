@@ -11,7 +11,7 @@ const Nature = () => {
     }, [])
 
     return (
-        <Container minH='90vh' maxW='60xl' mb={10}>
+        <Container minH='90vh' maxW='60xl' mb={20}>
             <Center mt={-10}>
                 <BreadcrumbForNaturePage currentPage={'Alam'} />
             </Center>
