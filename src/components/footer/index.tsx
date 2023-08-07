@@ -13,7 +13,7 @@ import {
   const Logo = (props: any) => {
     return ( 
       <div>
-        <h1><b>Baca Yuk</b></h1>
+        <img src='logoBacaYuk.svg' alt=""/>
       </div>
     );
   };
@@ -57,7 +57,6 @@ import {
         <Container
           as={Stack}
           maxW={'6xl'}
-          py={6}
           direction={{ base: 'column', md: 'row' }}
           spacing={20}
           justify={{ base: 'center', md: 'space-between' }}
@@ -66,7 +65,7 @@ import {
           <Text>© 2023 Copyright Baca Yuk. All rights reserved</Text>
           <div>
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-              <img alt="Creative Commons License" style={{ borderWidth: 0 }} src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+              <img className='logo-lisensi' alt="Creative Commons License" style={{ width:"80px" }} src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
             </a>
             This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
           </div>
