@@ -16,8 +16,8 @@ function Navbar() {
       <IconContext.Provider value={{ color: "#009900" }}>
         <nav className="navbar">
           <div className="navbar-container container">
-            <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-              Baca Yuk
+            <Link to="/" onClick={closeMobileMenu}>
+              <img className="logo" src="logoBacaYuk.svg" alt="" />
             </Link>
             <div className="menu-icon" onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
