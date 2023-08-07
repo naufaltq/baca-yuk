@@ -11,12 +11,12 @@ const Nature = () => {
     }, [])
 
     return (
-        <div>
+        <Container minH='90vh' maxW='60xl' mb={10}>
             <Center mt={-10}>
                 <BreadcrumbForNaturePage currentPage={'Alam'} />
             </Center>
             <NatureBooksComponent firstSlice={8} lastSlice={17}/>
-        </div>
+        </Container>
     )
 }
 
