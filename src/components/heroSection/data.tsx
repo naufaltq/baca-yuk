@@ -43,7 +43,7 @@ export const homeObjOne = {
     headline: " ",
     description: "Di sini, anda dapat menemukan koleksi video cerita yang akan membawa anda dalam perjalanan tanpa batas. Dari cerita-cerita inspiratif hingga petualangan yang mengasyikkan. Jadilah penonton yang terhanyut dalam setiap adegan, dan biarkan diri anda merasakan kisah-kisah yang menginspirasi.",
     imgStart: "start",
-    img: "images/menonton.png",
+    img: "images/menonton-video.png",
     alt: "watch",
   };
   
@@ -55,7 +55,7 @@ export const homeObjOne = {
     headline: " ",
     description: "Di sini, kami mengundang anda untuk menguji wawasan dan pemahaman anda melalui kuis yang menarik, kami menyajikan kuis-kuis yang tidak hanya menghibur, tetapi juga memicu keingintahuan.",
     imgStart: "",
-    img: "images/kuis.png",
+    img: "images/quiz.png",
     alt: "quiz",
   }; 
   
